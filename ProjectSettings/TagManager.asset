@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Anchor
+  - Yellow
+  - Blue
+  - White
+  - Red
+  - Target
   layers:
   - Default
   - TransparentFX
