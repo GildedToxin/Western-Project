@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Knife : MonoBehaviour
 {
     public float pointsScored;
     // Start is called before the first frame update
     void Start()
     {
-        
+     
     }
 
     // Update is called once per frame
@@ -20,9 +21,11 @@ public class Knife : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Target"))
         {
-        
+            if (collision.transform.GetComponent<DisableTarget>().isHit) return;
             print("You Hit the target and scored " + pointsScored + " points!");
-            Destroy(this.gameObject);
+            ScoreController.Instance.AddScore(pointsScored, this.transform);
+            collision.transform.GetComponent<DisableTarget>().OnHit();
+            //Destroy(this.gameObject);
         }
     }
 
@@ -32,6 +35,7 @@ public class Knife : MonoBehaviour
         {
             print("you got 50 points!");
             pointsScored = 50;
+            
         }
         else if (other.gameObject.CompareTag("Blue"))
         {
@@ -47,6 +51,7 @@ public class Knife : MonoBehaviour
         {
             print("you got 10 points!");
             pointsScored = 10;
+
         }
     }
 }
