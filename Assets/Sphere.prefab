@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 275413359407305154}
   - component: {fileID: 5114015410997756265}
   - component: {fileID: 6634052418282268999}
+  - component: {fileID: 5995572287149361746}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -131,7 +132,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -272,6 +273,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsScored: 0
+--- !u!114 &5995572287149361746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3143913898313835888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda52d3f35be0504592686caf5a95f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 90
+  bobHeight: 0.2
+  bobSpeed: 1
 --- !u!1001 &9076547251851036991
 PrefabInstance:
   m_ObjectHideFlags: 0
