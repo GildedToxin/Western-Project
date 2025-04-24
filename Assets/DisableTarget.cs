@@ -7,6 +7,12 @@ public class DisableTarget : MonoBehaviour
     public bool isHit;
     public Collider[] colliders;
     public Material mat;
+
+    [Header("Audio")]
+    public AudioClip hitSound;           // Assign this in the inspector
+    private AudioSource audioSource;     // Audio source component
+
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -16,7 +22,13 @@ public class DisableTarget : MonoBehaviour
         {
             colliders[i] = transform.GetChild(i).GetComponent<Collider>();
         }
-       
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
     }
 
     // Update is called once per frame
@@ -27,6 +39,10 @@ public class DisableTarget : MonoBehaviour
 
    public void OnHit()
     {
+        if (hitSound != null)
+        {
+            audioSource.PlayOneShot(hitSound);
+        }
         mat.color = new Color(0, 0, 0);
         isHit = true;
         foreach (Collider collider in colliders)
