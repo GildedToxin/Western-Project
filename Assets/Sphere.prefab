@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6634052418282268999}
   - component: {fileID: 5995572287149361746}
   - component: {fileID: 4469106481962376249}
+  - component: {fileID: 6959999917334021737}
   - component: {fileID: 2557791179229082883}
   m_Layer: 0
   m_Name: Sphere
@@ -304,6 +305,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabSound: {fileID: 8300000, guid: c93d4aaa09f33544082e0b70c16102eb, type: 3}
   throwSound: {fileID: 8300000, guid: fb29c5a686011da4e9b09bac7094d8a5, type: 3}
+--- !u!114 &6959999917334021737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3143913898313835888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6901eee60798b140890023caa580f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundImpactSound: {fileID: 8300000, guid: fcb0c9c5b015a6244a79939524f40295, type: 3}
+  woodImpactSound: {fileID: 8300000, guid: cf3dbc99007cd524cbd9909b2e2d95b1, type: 3}
 --- !u!82 &2557791179229082883
 AudioSource:
   m_ObjectHideFlags: 0
