@@ -34,7 +34,6 @@ public class SpawnWeapon : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Knife>())
         {
-            print(other.GetComponent<Rigidbody>().useGravity);
             other.gameObject.GetComponent<Rigidbody>().useGravity = true;
             other.gameObject.GetComponent<test>().enabled = false;
 
@@ -49,7 +48,7 @@ public class SpawnWeapon : MonoBehaviour
     public IEnumerator MyTwoSecondCoroutine()
     {
         
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0f);
         spawnedObject = Instantiate(objectPrefab, transform.position + Vector3.up * .25f , transform.rotation);
     }
 }

@@ -9,16 +9,21 @@ public class Knife : MonoBehaviour
 {
     private XRGrabInteractable grabInteractable;
     public float pointsScored;
+    public Vector3 pos;
     // Start is called before the first frame update
     void Start()
     {
+        pos = FindAnyObjectByType<SpawnWeapon>().transform.position;
         grabInteractable = GetComponent<XRGrabInteractable>();
     }
 
     // Update is called once per frame
     void Update()
     {
- 
+        if (transform.position.x != pos.x && transform.position.z != pos.z && GetComponent<Rigidbody>().useGravity == false)
+        {
+            GetComponent<Rigidbody>().useGravity = true;
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -33,7 +38,7 @@ public class Knife : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if (collision.gameObject.CompareTag("Floor"))
+        else 
         {
             FindAnyObjectByType<SpawnWeapon>().SpawnItem();
             Destroy(this.gameObject);

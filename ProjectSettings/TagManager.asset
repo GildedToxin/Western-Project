@@ -12,6 +12,7 @@ TagManager:
   - Target
   - PointUI
   - Floor
+  - OTHER
   layers:
   - Default
   - TransparentFX

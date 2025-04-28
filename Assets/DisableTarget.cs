@@ -43,13 +43,13 @@ public class DisableTarget : MonoBehaviour
         {
             audioSource.PlayOneShot(hitSound);
         }
-        mat.color = new Color(0, 0, 0);
-        isHit = true;
-        foreach (Collider collider in colliders)
-        {
-            collider.enabled = false;
-        }
-        StartCoroutine(EnableTarget());
+        //mat.color = new Color(0, 0, 0);
+        //isHit = true;
+        //foreach (Collider collider in colliders)
+        //{
+           // collider.enabled = false;
+        //}
+        //StartCoroutine(EnableTarget());
     }
 
     IEnumerator EnableTarget()
