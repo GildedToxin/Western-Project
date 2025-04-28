@@ -31,6 +31,7 @@ public class Knife : MonoBehaviour
         {
             if (collision.transform.GetComponent<DisableTarget>().isHit) return;
             print("You Hit the target and scored " + pointsScored + " points!");
+            if (pointsScored == 0) pointsScored = 5;
             ScoreController.Instance.AddScore(pointsScored, this.transform);
 
             collision.transform.GetComponent<DisableTarget>().OnHit();
