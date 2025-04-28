@@ -11,8 +11,7 @@ public class MusicManager : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = musicClip;
-        audioSource.loop = true;
-        audioSource.playOnAwake = false;
+        audioSource.playOnAwake = true;
         audioSource.Play();
     }
 }
